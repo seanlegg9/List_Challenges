@@ -38,15 +38,15 @@ def get_sandwich(str)
     (str.size - 4).times do |ingred|
         slice = str[ingred..(ingred + 4)]
         if slice == "bread"
-            
+            new_str = str[str.index(slice) + 5..str.rindex(slice) - 1]
         end
     end
     return new_str
 end
 
-# puts get_sandwich("breadbutterbread") # butter
-# puts get_sandwich("butterbread") # ""
-# puts get_sandwich("butterbreadbutterbreadbutterbreadbutter") # butterbreadbutter
+puts get_sandwich("breadbutterbread") # butter
+puts get_sandwich("butterbread") # ""
+puts get_sandwich("butterbreadbutterbreadbutterbreadbutter") # butterbreadbutter
 
 def count_code(str)
     count = 0
